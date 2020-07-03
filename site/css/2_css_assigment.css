@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: verdana, geneva, serif;
+    font-size: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.padding {
+    padding-top: 20px;
+}
+
+
+/* My CSS */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box {
+    width: 100%;
+    margin: 20px auto 10px auto;
+    float: left;
+}
+
+.title {
+    float: right;
+    width: 30%;
+    font-weight: bold;
+    font-size: 1em;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    text-align: center;
+}
+
+.contenido {
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    border: 2px solid black;
+}
+
+.contenido p:last-child {
+    clear: both;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.color-1 {
+    background-color: rgb(238, 135, 135);
+    color: black;
+}
+
+.color-2 {
+    background-color: #EE4382;
+    color: white;
+}
+
+.color-3 {
+    background-color: #FFFF84;
+    color: black;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+
+/*Media Queries */
+
+@media (min-width: 768px) {
+    .box {
+        width: 50%;
+    }
+    .contenido {
+        width: 95%;
+    }
+    .container .box:nth-child(3) .contenido {
+        float: right;
+    }
+    .container .box:nth-child(4) {
+        width: 100%;
+    }
+    .container .box:nth-child(4) .contenido {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container .box:nth-child(3) .contenido {
+        float: none;
+    }
+    .container .box {
+        width: 33.3% !important;
+        float: left !important;
+        /*border: 4px solid green;*/
+    }
+    .container .box .contenido {
+        width: 95% !important;
+        margin: 0 auto !important;
+    }
+}
